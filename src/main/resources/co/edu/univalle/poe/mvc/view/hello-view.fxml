@@ -92,6 +92,8 @@
         <HBox alignment="CENTER_LEFT">
             <Button mnemonicParsing="false" text="🕒  Ver historial"
                     style="-fx-background-color: #FFFFFF; -fx-text-fill: #232B3E; -fx-font-size: 14px; -fx-font-weight: bold; -fx-padding: 9 20 9 20; -fx-background-radius: 22; -fx-border-color: #232B3E; -fx-border-radius: 22; -fx-border-width: 2; -fx-cursor: hand;" />
+            <Button mnemonicParsing="false" onAction="#onAbrirAyuda" text="❓  Cómo jugar"
+                    style="-fx-background-color: #E3E8F4; -fx-text-fill: #232B3E; -fx-font-size: 14px; -fx-font-weight: bold; -fx-padding: 9 20 9 20; -fx-background-radius: 22; -fx-border-color: #232B3E; -fx-border-radius: 22; -fx-border-width: 2; -fx-cursor: hand;" />
             <Region HBox.hgrow="ALWAYS" />
              </HBox>
     </VBox>

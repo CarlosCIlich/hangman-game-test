@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" prefWidth="500.0" spacing="18.0"
+      style="-fx-background-color: #FAF8F5; -fx-font-family: 'Segoe UI', sans-serif;"
+      xmlns="http://javafx.com/javafx/17">
+
+    <!-- Barra superior -->
+    <HBox alignment="CENTER_LEFT"
+          style="-fx-background-color: #232B3E; -fx-background-radius: 0 0 18 18;">
+        <padding>
+            <Insets bottom="16.0" left="26.0" right="26.0" top="16.0" />
+        </padding>
+        <Label style="-fx-text-fill: #FFFFFF; -fx-font-size: 22px; -fx-font-weight: bold; -fx-border-color: transparent transparent #F5B041 transparent; -fx-border-width: 0 0 3 0;"
+               text="¿Cómo jugar?" />
+    </HBox>
+
+    <!-- Reglas -->
+    <VBox spacing="14.0">
+        <padding>
+            <Insets bottom="26.0" left="26.0" right="26.0" top="4.0" />
+        </padding>
+
+        <HBox alignment="CENTER_LEFT" spacing="14.0"
+              style="-fx-background-color: #FFFFFF; -fx-padding: 14 16 14 16; -fx-background-radius: 14; -fx-border-color: #B4C0D3; -fx-border-radius: 14; -fx-border-width: 1.5;">
+            <Label alignment="CENTER" text="1"
+                   style="-fx-min-width: 32px; -fx-min-height: 32px; -fx-background-color: #E3E8F4; -fx-text-fill: #232B3E; -fx-font-size: 15px; -fx-font-weight: bold; -fx-background-radius: 10;" />
+            <Label style="-fx-text-fill: #232B3E; -fx-font-size: 14px;" wrapText="true"
+                   text="Escribe tu nombre y haz clic en Nueva partida para empezar." />
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT" spacing="14.0"
+              style="-fx-background-color: #FFFFFF; -fx-padding: 14 16 14 16; -fx-background-radius: 14; -fx-border-color: #B4C0D3; -fx-border-radius: 14; -fx-border-width: 1.5;">
+            <Label alignment="CENTER" text="2"
+                   style="-fx-min-width: 32px; -fx-min-height: 32px; -fx-background-color: #DCE3F2; -fx-text-fill: #232B3E; -fx-font-size: 15px; -fx-font-weight: bold; -fx-background-radius: 10;" />
+            <Label style="-fx-text-fill: #232B3E; -fx-font-size: 14px;" wrapText="true"
+                   text="Presiona letras en tu teclado para adivinar la palabra secreta." />
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT" spacing="14.0"
+              style="-fx-background-color: #FFFFFF; -fx-padding: 14 16 14 16; -fx-background-radius: 14; -fx-border-color: #B4C0D3; -fx-border-radius: 14; -fx-border-width: 1.5;">
+            <Label alignment="CENTER" text="3"
+                   style="-fx-min-width: 32px; -fx-min-height: 32px; -fx-background-color: #FADBD8; -fx-text-fill: #B83B3B; -fx-font-size: 15px; -fx-font-weight: bold; -fx-background-radius: 10;" />
+            <Label style="-fx-text-fill: #232B3E; -fx-font-size: 14px;" wrapText="true"
+                   text="Tienes 6 intentos antes de que se complete el muñeco." />
+        </HBox>
+    </VBox>
+</VBox>
