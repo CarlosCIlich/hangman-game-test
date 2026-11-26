@@ -14,7 +14,7 @@
 <VBox alignment="TOP_CENTER" prefWidth="760.0" spacing="20.0"
       style="-fx-background-color: #FAF8F5; -fx-font-family: 'Segoe UI', sans-serif;"
       xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="co.edu.univalle.poe.mvc.controller.HelloController">
+      fx:controller="co.edu.univalle.poe.mvc.controller.HangmanController">
 
     <!-- Barra superior -->
     <HBox alignment="CENTER_LEFT"
