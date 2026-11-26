@@ -1,16 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+<VBox alignment="TOP_CENTER" prefWidth="760.0" spacing="20.0"
+      style="-fx-background-color: #FAF8F5; -fx-font-family: 'Segoe UI', sans-serif;"
+      xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="co.edu.univalle.poe.mvc.controller.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+    <!-- Barra superior -->
+    <HBox alignment="CENTER_LEFT"
+          style="-fx-background-color: #232B3E; -fx-background-radius: 0 0 18 18;">
+        <padding>
+            <Insets bottom="16.0" left="28.0" right="28.0" top="16.0" />
+        </padding>
+        <Label style="-fx-text-fill: #FFFFFF; -fx-font-size: 24px; -fx-font-weight: bold; -fx-border-color: transparent transparent #F5B041 transparent; -fx-border-width: 0 0 3 0;"
+               text="Hangman" />
+    </HBox>
+
+    <!-- Contenido -->
+    <VBox spacing="22.0">
+        <padding>
+            <Insets bottom="24.0" left="30.0" right="30.0" top="4.0" />
+        </padding>
+
+        <!-- Nombre del jugador y Nueva partida -->
+        <HBox alignment="CENTER_LEFT" spacing="12.0">
+            <Label style="-fx-text-fill: #232B3E; -fx-font-size: 15px; -fx-font-weight: bold;"
+                   text="Nombre del jugador:" />
+            <TextField prefWidth="280.0" promptText="Escribe tu nombre" text="Sarah"
+                       style="-fx-background-color: #FFFFFF; -fx-text-fill: #232B3E; -fx-font-size: 14px; -fx-padding: 8 14 8 14; -fx-background-radius: 12; -fx-border-color: #8E9AAF; -fx-border-radius: 12; -fx-border-width: 1.5;" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Button mnemonicParsing="false" text="▶  Nueva partida"
+                    style="-fx-background-color: #232B3E; -fx-text-fill: #FFFFFF; -fx-font-size: 14px; -fx-font-weight: bold; -fx-padding: 10 22 10 22; -fx-background-radius: 22; -fx-cursor: hand;" />
+        </HBox>
+
+        <!-- Zona central: Imagen a la izquierda + Palabra secreta a la derecha -->
+        <HBox alignment="CENTER" spacing="30.0">
+
+            <!-- Aquí se cargan img1.png hasta img7.png -->
+            <ImageView fx:id="imgAhorcado" fitHeight="250.0" fitWidth="240.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../images/img0.png" />
+                </image>
+            </ImageView>
+
+            <!-- Palabra secreta e intentos -->
+            <VBox alignment="CENTER" spacing="20.0" HBox.hgrow="ALWAYS">
+                <Label style="-fx-background-color: #E3E8F4; -fx-text-fill: #232B3E; -fx-font-size: 18px; -fx-font-weight: bold; -fx-padding: 6 32 6 32; -fx-background-radius: 16;"
+                       text="Palabra secreta" />
+
+                <!-- Casillas de letras -->
+                <HBox alignment="CENTER" spacing="10.0">
+                    <Label alignment="CENTER" text=""
+                           style="-fx-min-width: 46px; -fx-min-height: 52px; -fx-background-color: #FFFFFF; -fx-background-radius: 11; -fx-border-color: #3B465E; -fx-border-width: 2; -fx-border-radius: 11;" />
+                    <Label alignment="CENTER" text="A"
+                           style="-fx-min-width: 46px; -fx-min-height: 52px; -fx-background-color: #DCE3F2; -fx-text-fill: #232B3E; -fx-font-size: 22px; -fx-font-weight: bold; -fx-background-radius: 11; -fx-border-color: #3B465E; -fx-border-width: 2; -fx-border-radius: 11;" />
+                    <Label alignment="CENTER" text=""
+                           style="-fx-min-width: 46px; -fx-min-height: 52px; -fx-background-color: #FFFFFF; -fx-background-radius: 11; -fx-border-color: #3B465E; -fx-border-width: 2; -fx-border-radius: 11;" />
+                    <Label alignment="CENTER" text="A"
+                           style="-fx-min-width: 46px; -fx-min-height: 52px; -fx-background-color: #DCE3F2; -fx-text-fill: #232B3E; -fx-font-size: 22px; -fx-font-weight: bold; -fx-background-radius: 11; -fx-border-color: #3B465E; -fx-border-width: 2; -fx-border-radius: 11;" />
+                    <Label alignment="CENTER" text=""
+                           style="-fx-min-width: 46px; -fx-min-height: 52px; -fx-background-color: #FFFFFF; -fx-background-radius: 11; -fx-border-color: #3B465E; -fx-border-width: 2; -fx-border-radius: 11;" />
+                    <Label alignment="CENTER" text=""
+                           style="-fx-min-width: 46px; -fx-min-height: 52px; -fx-background-color: #FFFFFF; -fx-background-radius: 11; -fx-border-color: #3B465E; -fx-border-width: 2; -fx-border-radius: 11;" />
+                    <Label alignment="CENTER" text="A"
+                           style="-fx-min-width: 46px; -fx-min-height: 52px; -fx-background-color: #DCE3F2; -fx-text-fill: #232B3E; -fx-font-size: 22px; -fx-font-weight: bold; -fx-background-radius: 11; -fx-border-color: #3B465E; -fx-border-width: 2; -fx-border-radius: 11;" />
+                </HBox>
+
+                <Separator style="-fx-opacity: 0.45;" />
+
+                <!-- Intentos restantes -->
+                <HBox alignment="CENTER" spacing="10.0">
+                    <Label style="-fx-text-fill: #232B3E; -fx-font-size: 16px; -fx-font-weight: bold;"
+                           text="Intentos restantes:" />
+                    <Label style="-fx-background-color: #FADBD8; -fx-text-fill: #B83B3B; -fx-font-size: 16px; -fx-font-weight: bold; -fx-padding: 4 14 4 14; -fx-background-radius: 12;"
+                           text="6 de 6" />
+                </HBox>
+            </VBox>
+        </HBox>
+
+        <!-- Botones inferiores -->
+        <HBox alignment="CENTER_LEFT">
+            <Button mnemonicParsing="false" text="🕒  Ver historial"
+                    style="-fx-background-color: #FFFFFF; -fx-text-fill: #232B3E; -fx-font-size: 14px; -fx-font-weight: bold; -fx-padding: 9 20 9 20; -fx-background-radius: 22; -fx-border-color: #232B3E; -fx-border-radius: 22; -fx-border-width: 2; -fx-cursor: hand;" />
+            <Region HBox.hgrow="ALWAYS" />
+             </HBox>
+    </VBox>
 </VBox>
