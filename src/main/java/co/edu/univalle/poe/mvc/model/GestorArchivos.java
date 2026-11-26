@@ -92,6 +92,10 @@ public class GestorArchivos {
 
     }
 
+    /**
+     * Metodo para leer el archivo de historial con los puntajes anteriores.
+     * @return Devuelve una lista de objetos tipo InfoJugador.
+     */
     public List<InfoJugador> leerHistorial() {
 
         List<InfoJugador> historial = new ArrayList<InfoJugador>();
@@ -108,6 +112,7 @@ public class GestorArchivos {
 
             while ((linea = reader.readLine()) != null) {
 
+                // Revisar si esto hace alguna diferencia.
                 if (linea.isBlank()){
                     continue;
                 }
